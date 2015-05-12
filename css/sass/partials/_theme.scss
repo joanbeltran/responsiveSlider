@@ -1,0 +1,183 @@
+//responsiveSlider style
+
+// width and height of the slider
+$sliderWidth: 600px;
+$sliderHeight: 400px;
+
+//mixins
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+//basics
+.rs-container {
+  overflow: hidden;
+  display: none;
+  position:absolute;
+  
+  width: $sliderWidth;
+  height: $sliderHeight;
+}
+.rs-wrap {
+  overflow: hidden;
+  position:absolute;
+}
+
+.rs-slide {
+  float: left;
+  position: relative;
+  width:100%;
+  height: 100%;
+}
+
+.rs-slide-bg {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  img {
+    display: none;
+  }
+}
+
+// buttons styles (feel free to change it)
+$buttons-width: 80px;
+$buttons-height: 80px;
+$buttons-width-hover: 100px;
+$buttons-height-hover: 100px;
+$negative-margin-vertical: ($buttons-height-hover / 2) * -1;
+$negative-margin-horizontal: ($buttons-width-hover / 2) * -1;
+$margin-horizontal: ($buttons-width-hover - $buttons-width) / 2;
+$margin-vertical: ($buttons-height-hover - $buttons-height) / 2;
+.rs-next,
+.rs-previous {
+  width: $buttons-width-hover;
+  height: $buttons-height-hover;
+  
+  position: absolute;
+  z-index: 999;
+
+  .inside {
+    width: $buttons-width;
+    height: $buttons-height;
+    margin: $margin-vertical $margin-horizontal;
+    background-color: #fff;
+    cursor: pointer;
+    @include transition(all .2s ease);
+    @include opacity(0.6);
+    border-radius: 50%;
+
+    img {
+      width: $buttons-width;
+      height: $buttons-height;
+      @include transition(all .2s ease);
+    }
+
+    &:hover {
+      width: $buttons-width-hover;
+      height: $buttons-height-hover;
+      margin: 0;
+      @include opacity(0.9);
+
+      img {
+        width: $buttons-width-hover;
+        height: $buttons-height-hover;
+      }
+    }
+  }
+  
+}
+.rs-next {
+  &.vertical {
+    bottom: 0;
+    margin-bottom: $negative-margin-vertical;
+  }
+  &.horizontal {
+    right: 0;
+    margin-right: $negative-margin-horizontal;
+  }
+}
+.rs-previous {
+  &.vertical {
+    top: 0;
+    margin-top: $negative-margin-vertical;
+  }
+  &.horizontal {
+    left: 0;
+    margin-left: $negative-margin-horizontal;
+  }
+}
+
+//pager
+$pager-size: 10px;
+$pager-size-hover: 16px;
+$pager-margin: ($pager-size-hover - $pager-size) / 2;
+.rs-pager {
+  position: fixed;
+  z-index: 9999;
+  > div {
+    height: $pager-size-hover;
+    width: $pager-size-hover;
+    margin:2px;
+
+    cursor: pointer;
+    float:left;
+    > div {
+      background-color: #fff;
+      border-radius: 50%;
+      @include opacity(0.9);
+      @include transition(all .2s ease);
+      height: $pager-size;
+      width: $pager-size;
+      margin: $pager-margin;
+      &.active,
+      &:hover {
+        height: $pager-size-hover;
+        width: $pager-size-hover;
+        margin:0;
+      } 
+    }
+  }
+}
+
+// timer bar
+$timebar-size: 4px;
+#timer-bar {
+  position: absolute;
+  z-index: 99999;
+
+  div {
+    position: absolute;
+    background-color: #fff;
+    @include opacity(0.9);
+  }
+
+  &.vertical {
+    width:$timebar-size;
+    height:100%;
+    left:0;
+
+    div {
+      height:0;
+      width:$timebar-size;
+    }
+  }
+  &.horizontal {
+    width:100%;
+    height:$timebar-size;
+    bottom:0;
+
+    div {
+      height:$timebar-size;
+      width:0;
+    }
+  }  
+}

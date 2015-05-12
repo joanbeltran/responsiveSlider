@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"  class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Responsive Slider</title>
+  <meta name="description" content="">
+
+  <meta property="og:title" content="Responsive Slide" />
+  <meta property="og:image" content="" /> 
+  <meta property="og:description" content="" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="rs-container">
+    <div class="rs-content">
+
+      <div class="rs-slide">
+        <div class="rs-slide-bg">
+          <img src="statics/img/examples/img1.jpg">
+        </div>
+      </div><!-- .rs-slide -->
+
+      <div class="rs-slide">
+        <div class="rs-slide-bg">
+          <img src="statics/img/examples/img2.jpg">
+        </div>
+      </div><!-- .rs-slide -->
+
+      <div class="rs-slide">
+        <div class="rs-slide-bg">
+          <img src="statics/img/examples/img3.jpg">
+        </div>
+      </div><!-- .rs-slide -->
+
+      <div class="rs-slide">
+        <div class="rs-slide-bg">
+          <img src="statics/img/examples/img4.jpg">
+        </div>
+      </div><!-- .rs-slide -->
+
+      <div class="rs-slide">
+        <div class="rs-slide-bg">
+          <img src="statics/img/examples/img5.jpg">
+        </div>
+      </div><!-- .rs-slide -->
+
+    </div><!-- .rs-content -->
+  </div><!-- .rs-container -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+  
+
+  <!-- scripts concatenated and minified via ant build script-->
+  
+  <script src="js/responsive-slider.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.rs-container').responsiveSlider();
+    });
+  </script>
+  <!-- end scripts-->
+
+  <!--<script>
+    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>-->
+
+</body>
+</html>
