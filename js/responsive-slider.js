@@ -380,7 +380,7 @@ MIT License
             fadeTime :          1000, // milliseconds
             moveTime :          800, // milliseconds
             moveByTimer :       true,
-            timerTime :         15000, // milliseconds
+            timerTime :         1500, // milliseconds
             responsive :        true,
             infinite :          true
         };
@@ -481,14 +481,18 @@ MIT License
             }
         }
         if(options.direction == 'horizontal' && keepMoving) {
-            if(options.infinite && theSlide == slidesNumber-1) {
+
+            if(options.infinite && theSlide == slidesNumber) {
                 elem.find('.rs-wrap').scrollLeft(0);
                 theSlide = 0;
+                var move = (size.width * theSlide) + size.width;
                 console.log('weah', slidesNumber);
             } else {
-                theSlide += 1;
+                var move = (size.width * theSlide) + size.width;
+                
             }
-            var move = (size.width * theSlide) + size.width;
+            theSlide += 1;
+            console.log(move);
             elem.find('.rs-wrap').animate({scrollLeft: move}, options.moveTime, 'swing');
         } else if(options.direction == 'vertical' && keepMoving) {
             if(options.infinite && theSlide == slidesNumber) {
@@ -557,7 +561,7 @@ MIT License
         makeTimerBar(elem, size, slidesNumber, options);
         var interval = setInterval(function(){ 
             var theActualSlide = elem.data('actualSlide');
-            if(theActualSlide == slidesNumber - 1) {
+            if(theActualSlide == (slidesNumber - 1) && !options.infinite) {
                 moveNext(elem, size, slidesNumber, options);
                 stopTimerMoving(elem, options);
             } else {
