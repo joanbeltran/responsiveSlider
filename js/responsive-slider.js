@@ -481,19 +481,20 @@ MIT License
             }
         }
         if(options.direction == 'horizontal' && keepMoving) {
-            var move = (size.width * theSlide) + size.width;
-            if(options.infinite && theSlide == slidesNumber) {
+            if(options.infinite && theSlide == slidesNumber-1) {
                 elem.find('.rs-wrap').scrollLeft(0);
                 theSlide = 0;
+                console.log('weah', slidesNumber);
             } else {
                 theSlide += 1;
             }
+            var move = (size.width * theSlide) + size.width;
             elem.find('.rs-wrap').animate({scrollLeft: move}, options.moveTime, 'swing');
-            console.log(theSlide);
         } else if(options.direction == 'vertical' && keepMoving) {
             if(options.infinite && theSlide == slidesNumber) {
                 elem.find('.rs-wrap').scrollTop(0);
                 theSlide = 0;
+
             } else {
                 theSlide += 1;
             }
