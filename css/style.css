@@ -441,8 +441,8 @@ th {
   overflow: hidden;
   display: none;
   position: absolute;
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 /* line 30, sass/partials/_theme.scss */
