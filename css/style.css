@@ -436,7 +436,7 @@ th {
   padding: 0;
 }
 
-/* line 21, sass/partials/_theme.scss */
+/* line 22, sass/partials/_theme.scss */
 .rs-container {
   overflow: hidden;
   display: none;
@@ -445,13 +445,13 @@ th {
   height: 400px;
 }
 
-/* line 29, sass/partials/_theme.scss */
+/* line 30, sass/partials/_theme.scss */
 .rs-wrap {
   overflow: hidden;
   position: absolute;
 }
 
-/* line 34, sass/partials/_theme.scss */
+/* line 35, sass/partials/_theme.scss */
 .rs-slide {
   float: left;
   position: relative;
@@ -459,19 +459,19 @@ th {
   height: 100%;
 }
 
-/* line 41, sass/partials/_theme.scss */
+/* line 42, sass/partials/_theme.scss */
 .rs-slide-bg {
   position: absolute;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-/* line 46, sass/partials/_theme.scss */
+/* line 47, sass/partials/_theme.scss */
 .rs-slide-bg img {
   display: none;
 }
 
-/* line 60, sass/partials/_theme.scss */
+/* line 61, sass/partials/_theme.scss */
 .rs-next,
 .rs-previous {
   width: 100px;
@@ -479,7 +479,7 @@ th {
   position: absolute;
   z-index: 999;
 }
-/* line 68, sass/partials/_theme.scss */
+/* line 69, sass/partials/_theme.scss */
 .rs-next .inside,
 .rs-previous .inside {
   width: 80px;
@@ -494,7 +494,7 @@ th {
   filter: alpha(opacity=60);
   border-radius: 50%;
 }
-/* line 78, sass/partials/_theme.scss */
+/* line 79, sass/partials/_theme.scss */
 .rs-next .inside img,
 .rs-previous .inside img {
   width: 80px;
@@ -503,7 +503,7 @@ th {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 84, sass/partials/_theme.scss */
+/* line 85, sass/partials/_theme.scss */
 .rs-next .inside:hover,
 .rs-previous .inside:hover {
   width: 100px;
@@ -512,41 +512,41 @@ th {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 90, sass/partials/_theme.scss */
+/* line 91, sass/partials/_theme.scss */
 .rs-next .inside:hover img,
 .rs-previous .inside:hover img {
   width: 100px;
   height: 100px;
 }
 
-/* line 99, sass/partials/_theme.scss */
+/* line 100, sass/partials/_theme.scss */
 .rs-next.vertical {
   bottom: 0;
   margin-bottom: -50px;
 }
-/* line 103, sass/partials/_theme.scss */
+/* line 104, sass/partials/_theme.scss */
 .rs-next.horizontal {
   right: 0;
   margin-right: -50px;
 }
 
-/* line 109, sass/partials/_theme.scss */
+/* line 110, sass/partials/_theme.scss */
 .rs-previous.vertical {
   top: 0;
   margin-top: -50px;
 }
-/* line 113, sass/partials/_theme.scss */
+/* line 114, sass/partials/_theme.scss */
 .rs-previous.horizontal {
   left: 0;
   margin-left: -50px;
 }
 
-/* line 123, sass/partials/_theme.scss */
+/* line 124, sass/partials/_theme.scss */
 .rs-pager {
   position: fixed;
   z-index: 9999;
 }
-/* line 126, sass/partials/_theme.scss */
+/* line 127, sass/partials/_theme.scss */
 .rs-pager > div {
   height: 16px;
   width: 16px;
@@ -554,7 +554,7 @@ th {
   cursor: pointer;
   float: left;
 }
-/* line 133, sass/partials/_theme.scss */
+/* line 134, sass/partials/_theme.scss */
 .rs-pager > div > div {
   background-color: #fff;
   border-radius: 50%;
@@ -567,43 +567,43 @@ th {
   width: 10px;
   margin: 3px;
 }
-/* line 141, sass/partials/_theme.scss */
+/* line 142, sass/partials/_theme.scss */
 .rs-pager > div > div.active, .rs-pager > div > div:hover {
   height: 16px;
   width: 16px;
   margin: 0;
 }
 
-/* line 153, sass/partials/_theme.scss */
+/* line 154, sass/partials/_theme.scss */
 #timer-bar {
   position: absolute;
   z-index: 99999;
 }
-/* line 157, sass/partials/_theme.scss */
+/* line 158, sass/partials/_theme.scss */
 #timer-bar div {
   position: absolute;
   background-color: #fff;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 163, sass/partials/_theme.scss */
+/* line 164, sass/partials/_theme.scss */
 #timer-bar.vertical {
   width: 4px;
   height: 100%;
   left: 0;
 }
-/* line 168, sass/partials/_theme.scss */
+/* line 169, sass/partials/_theme.scss */
 #timer-bar.vertical div {
   height: 0;
   width: 4px;
 }
-/* line 173, sass/partials/_theme.scss */
+/* line 174, sass/partials/_theme.scss */
 #timer-bar.horizontal {
   width: 100%;
   height: 4px;
   bottom: 0;
 }
-/* line 178, sass/partials/_theme.scss */
+/* line 179, sass/partials/_theme.scss */
 #timer-bar.horizontal div {
   height: 4px;
   width: 0;
