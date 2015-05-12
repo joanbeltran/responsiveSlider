@@ -173,7 +173,8 @@ MIT License
             moveByTimer :       true,
             timerTime :         15000, // milliseconds
             responsive :        true,
-            infinite :          true
+            infinite :          true,
+            imgPath :           'statics/img/'
         };
 
     // PRIVATE METHODS
@@ -381,7 +382,7 @@ MIT License
     };
 
     var makeButtons = function(elem, size, slidesNumber, options) {
-        var buttonsUrl = 'statics/img/buttons-' + options.direction + '.png';
+        var buttonsUrl = options.imgPath + 'buttons-' + options.direction + '.png';
         var buttonWidth = 120;
         var buttonHeight = 120;
         if(options.direction == 'horizontal') { 

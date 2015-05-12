@@ -124,7 +124,7 @@ $pager-size: 10px;
 $pager-size-hover: 16px;
 $pager-margin: ($pager-size-hover - $pager-size) / 2;
 .rs-pager {
-  position: fixed;
+  position: absolute;
   z-index: 9999;
   > div {
     height: $pager-size-hover;
