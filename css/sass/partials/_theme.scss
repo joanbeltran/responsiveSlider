@@ -49,7 +49,8 @@ $principalColor : #fff;
   }
 }
 
-// buttons styles (feel free to change it)
+// buttons styles
+$buttonsColor: $principalColor;
 $buttons-width: 80px;
 $buttons-height: 80px;
 $buttons-width-hover: 100px;
@@ -70,7 +71,7 @@ $margin-vertical: ($buttons-height-hover - $buttons-height) / 2;
     width: $buttons-width;
     height: $buttons-height;
     margin: $margin-vertical $margin-horizontal;
-    background-color: #fff;
+    background-color: $buttonsColor;
     cursor: pointer;
     @include transition(all .2s ease);
     @include opacity(0.6);
@@ -118,6 +119,7 @@ $margin-vertical: ($buttons-height-hover - $buttons-height) / 2;
 }
 
 //pager
+$pagerColor: $principalColor;
 $pager-size: 10px;
 $pager-size-hover: 16px;
 $pager-margin: ($pager-size-hover - $pager-size) / 2;
@@ -132,7 +134,7 @@ $pager-margin: ($pager-size-hover - $pager-size) / 2;
     cursor: pointer;
     float:left;
     > div {
-      background-color: #fff;
+      background-color: $pagerColor;
       border-radius: 50%;
       @include opacity(0.9);
       @include transition(all .2s ease);
@@ -150,6 +152,7 @@ $pager-margin: ($pager-size-hover - $pager-size) / 2;
 }
 
 // timer bar
+$timebarColor: $principalColor;
 $timebar-size: 4px;
 #timer-bar {
   position: absolute;
@@ -157,7 +160,7 @@ $timebar-size: 4px;
 
   div {
     position: absolute;
-    background-color: #fff;
+    background-color: $timebarColor;
     @include opacity(0.9);
   }
 
